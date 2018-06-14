@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <meta charset="UTF-8">
@@ -7,7 +7,7 @@
     <link type="text/css" href="/static/css/bootstrap.css" >
     <style>
         #background {
-            background: url(/img/login.jpg) ;
+            background: url(/img/login.jpg);
         }
         .input-box{
             width: 300px;
@@ -40,6 +40,18 @@
     <div class="input-box text-center" style="padding-top: 20px">
         <button type="button" class="btn btn-warning">欢迎来到此地</button>
     </div>
+
+    <!--if 测试-->
+
+    <div>
+        <span th:if="${user.name =='xiaoyu'}" th:text="|nihca,${user.name}!|">
+    </div>
+
+
+
+    <!--foreach 测试-->
+
+
 </div>
 <script type="text/javascript" src="/static/js/bootstrap.js"></script>
 <script type="text/javascript">
